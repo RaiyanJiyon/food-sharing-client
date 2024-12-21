@@ -1,0 +1,66 @@
+food-sharing-client/
+├── public/
+│   ├── favicon.ico
+│   └── index.html
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── icons/
+│   ├── components/
+│   │   ├── shared/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── LoadingSpinner.jsx
+│   │   │   └── ErrorMessage.jsx
+│   │   ├── ui/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Card.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   └── Table.jsx
+│   │   └── forms/
+│   │       ├── FoodRequestForm.jsx
+│   │       └── FoodAddForm.jsx
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.jsx
+│   │   │   ├── Banner.jsx
+│   │   │   ├── FeaturedFoods.jsx
+│   │   │   └── ExtraSections/
+│   │   ├── AvailableFoods/
+│   │   │   ├── AvailableFoods.jsx
+│   │   │   ├── FoodCard.jsx
+│   │   │   ├── SortingSection.jsx
+│   │   │   └── SearchSection.jsx
+│   │   ├── AddFood/
+│   │   │   └── AddFood.jsx
+│   │   ├── ManageMyFoods/
+│   │   │   ├── ManageMyFoods.jsx
+│   │   │   └── UpdateFoodModal.jsx
+│   │   ├── MyFoodRequest/
+│   │   │   └── MyFoodRequest.jsx
+│   │   ├── FoodDetails/
+│   │   │   └── FoodDetails.jsx
+│   │   └── Authentication/
+│   │       ├── Login.jsx
+│   │       └── Register.jsx
+│   ├── hooks/
+│   │   ├── useAxiosSecure.js
+│   │   ├── useAuth.js
+│   │   └── useTitle.js
+│   ├── contexts/
+│   │   └── AuthContext.jsx
+│   ├── routes/
+│   │   ├── PrivateRoute.jsx
+│   │   └── Routes.jsx
+│   ├── utils/
+│   │   ├── axios.config.js
+│   │   └── firebase.config.js
+│   ├── api/
+│   │   └── axiosInstance.js
+│   ├── lib/
+│   │   └── tanstack-query.js
+│   └── App.jsx
+├── .gitignore
+├── .env.local
+├── package.json
+└── README.md
