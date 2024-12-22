@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.great-vibes-regular {
+  font-family: "Great Vibes", serif;
+  font-weight: 400;
+  font-style: normal;
+}
