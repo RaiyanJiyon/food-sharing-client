@@ -91,9 +91,14 @@ const Navbar = () => {
                             </ul>
                         </div>
                         :
+                        <div className="space-x-4">
                         <Link to={'/login'}>
                             <button className="btn bg-black text-white font-bold hover:bg-[#c59d5f]">Login</button>
                         </Link>
+                        <Link to={'/register'}>
+                            <button className="btn bg-black text-white font-bold hover:bg-[#c59d5f]">Signup</button>
+                        </Link>
+                        </div>
                 }
             </div>
         </div >
