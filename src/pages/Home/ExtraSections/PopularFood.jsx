@@ -49,7 +49,7 @@ const PopularFood = () => {
         <div className='w-11/12 mx-auto'>
             <div>
                 <h2 className='mb-5 text-3xl font-bold'>Popular Dishes Of Our Restaurant</h2>
-                <p className='text-gray-700 font-medium mb-10'>The PopularFood component showcases a carousel of popular dishes from your restaurant using Swiper. It features autoplay, navigation, and a hover effect to reveal the dish title and an &quot;Order Now&quot; button that links to the available foods page.</p>
+                <p className='text-gray-800 mb-10'>Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Orci ac auctor augue mauris augue neque gravida in Aliquam.</p>
             </div>
             <Swiper
                 modules={[Navigation, Autoplay]}
@@ -57,6 +57,23 @@ const PopularFood = () => {
                 slidesPerView={3}
                 navigation
                 autoplay={{ delay: 3000 }}
+                breakpoints={{
+                    // when window width is >= 340px
+                    340: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    // when window width is >= 440px
+                    440: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                    },
+                    // when window width is >= 1024px
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                }}
             >
                 {
                     popularFoodImages.map((foodImage, idx) => (

@@ -26,7 +26,7 @@ const BannerDetails = ({ image, secondaryTitle, primaryTitle, description }) => 
                         />
                     </h1>
                     <Fade>
-                        <p className="mb-5 text-white text-xl w-3/4 mx-auto">
+                        <p className="mb-5 text-white text-xl md:w-3/4 mx-auto">
                             {description}
                         </p>
                     </Fade>
