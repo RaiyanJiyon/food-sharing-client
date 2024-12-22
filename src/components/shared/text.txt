@@ -1,0 +1,318 @@
+<ul class="marquee-wrapper">
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_123555365.png?v=1687263984 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_123555365.png?v=1687263984&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/Group_245.svg?v=1689770588 205w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/Group_245.svg?v=1689770588&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="205" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_368108768.png?v=1687264022 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_368108768.png?v=1687264022&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_284468930.png?v=1687264046 361w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_284468930.png?v=1687264046&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="361" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_306478539.png?v=1687264170 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_306478539.png?v=1687264170&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_232625881.png?v=1687264187 205w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_232625881.png?v=1687264187&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="205" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_221011204.png?v=1687264203 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_221011204.png?v=1687264203&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_601987580.png?v=1687264226 205w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_601987580.png?v=1687264226&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="205" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_307526036.png?v=1687266251 205w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_307526036.png?v=1687266251&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="205" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_283708116.png?v=1687266264 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_283708116.png?v=1687266264&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li>
+          
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_123555365.png?v=1687263984 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_123555365.png?v=1687263984&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/Group_245.svg?v=1689770588 205w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/Group_245.svg?v=1689770588&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="205" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_368108768.png?v=1687264022 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_368108768.png?v=1687264022&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_284468930.png?v=1687264046 361w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_284468930.png?v=1687264046&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="361" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_306478539.png?v=1687264170 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_306478539.png?v=1687264170&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_232625881.png?v=1687264187 205w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_232625881.png?v=1687264187&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="205" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_221011204.png?v=1687264203 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_221011204.png?v=1687264203&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_601987580.png?v=1687264226 205w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_601987580.png?v=1687264226&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="205" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_307526036.png?v=1687266251 205w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_307526036.png?v=1687266251&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="205" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+            <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_283708116.png?v=1687266264 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_283708116.png?v=1687266264&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+
+                  
+                </a>
+              </div>
+            </li>
+          
+        <li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_123555365.png?v=1687263984 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_123555365.png?v=1687263984&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li><li class="marquee-block">
+              <div class="marquee-inner-wrapper">
+                <a href="">
+                  
+                  
+                    <div class="marquee-image">
+                      <img srcset="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_123555365.png?v=1687263984 131w
+                        " sizes="100vw" src="//dt-kudil.myshopify.com/cdn/shop/files/AdobeStock_123555365.png?v=1687263984&amp;width=1500" loading="lazy" class="dt-sc-brand-image" alt="" width="131" height="124">
+                    </div>
+                  
+                </a>
+              </div>
+            </li></ul>
