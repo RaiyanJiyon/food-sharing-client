@@ -31,7 +31,7 @@ const BannerDetails = ({ image, secondaryTitle, primaryTitle, description }) => 
                         </p>
                     </Fade>
                     <Link to={'/available-foods'}>
-                        <button className="btn bg-[#c59d5f] text-white font-bold border-none">Explore Now</button>
+                        <button className="btn bg-[#c59d5f] hover:bg-black text-white font-bold border-none">Explore Now</button>
                     </Link>
                 </div>
             </div>

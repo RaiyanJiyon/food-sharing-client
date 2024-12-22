@@ -3,45 +3,40 @@ import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { Link } from 'react-router-dom';
 
 const PopularFood = () => {
-    const [selectedFood, setSelectedFood] = useState(null);
-    
+    const [selectedFood, setSelectedFood] = useState(true);
+
     const popularFoodImages = [
         {
             src: "//dt-kudil.myshopify.com/cdn/shop/files/home-carousel-1.jpg?v=1689942343",
             alt: "Spicy Gravy",
-            link: "/collections/fast-food",
             title: "Spicy Gravy",
         },
         {
             src: "//dt-kudil.myshopify.com/cdn/shop/files/home-carousel-2.jpg?v=1689942364",
             alt: "Grill",
-            link: "/collections/fruits-juice",
             title: "Grill",
         },
         {
             src: "//dt-kudil.myshopify.com/cdn/shop/files/grid-1.png?v=1687261301",
             alt: "Juice",
-            link: "/collections/fruits-juice",
             title: "Juice",
         },
         {
             src: "//dt-kudil.myshopify.com/cdn/shop/files/grid-2.png?v=1687261318",
             alt: "Ice Cream",
-            link: "/collections/non-vegetarian",
             title: "Ice Cream",
         },
         {
             src: "//dt-kudil.myshopify.com/cdn/shop/files/grid-3.png?v=1687261332",
             alt: "Pizza",
-            link: "/collections/non-vegetarian",
             title: "Pizza",
         },
         {
             src: "//dt-kudil.myshopify.com/cdn/shop/files/grid-4.png?v=1687261348",
             alt: "Burger",
-            link: "/collections/vegetarian",
             title: "Burger",
         },
     ];
@@ -54,7 +49,7 @@ const PopularFood = () => {
         <div className='w-11/12 mx-auto'>
             <div>
                 <h2 className='mb-5 text-3xl font-bold'>Popular Dishes Of Our Restaurant</h2>
-                <p className='text-gray-800 mb-10'>Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Orci ac auctor augue mauris augue neque gravida in Aliquam.</p>
+                <p className='text-gray-700 font-medium mb-10'>The PopularFood component showcases a carousel of popular dishes from your restaurant using Swiper. It features autoplay, navigation, and a hover effect to reveal the dish title and an &quot;Order Now&quot; button that links to the available foods page.</p>
             </div>
             <Swiper
                 modules={[Navigation, Autoplay]}
@@ -68,29 +63,17 @@ const PopularFood = () => {
                         <SwiperSlide key={idx}>
                             <div className='relative cursor-pointer' onClick={() => handleCardClick(foodImage)}>
                                 <img className='w-full h-auto' src={foodImage.src} alt={foodImage.alt} />
-                                <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity duration-300'>
-                                    <h3 className='text-xl'>{foodImage.title}</h3>
-                                    <a href={foodImage.link} className='mt-3 bg-yellow-500 text-black px-4 py-2 rounded'>
-                                        Order Now
-                                    </a>
+                                <div className='absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 space-y-6'>
+                                    <h3 className='great-vibes-regular text-3xl font-bold'>{foodImage.title}</h3>
+                                    <Link to={'/available-foods'}>
+                                        <button className="btn bg-[#c59d5f] hover:bg-black text-white font-bold border-none">Order Now</button>
+                                    </Link>
                                 </div>
                             </div>
                         </SwiperSlide>
                     ))
                 }
             </Swiper>
-
-            {selectedFood && (
-                <div className='fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 z-50'>
-                    <div className='bg-white p-5 rounded'>
-                        <h3 className='text-2xl font-bold'>{selectedFood.title}</h3>
-                        <p className='mt-2'>Detailed information about {selectedFood.title} goes here.</p>
-                        <button onClick={() => setSelectedFood(null)} className='mt-4 bg-red-500 text-white px-4 py-2 rounded'>
-                            Close
-                        </button>
-                    </div>
-                </div>
-            )}
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import Banner from "./Banner";
+import PopularFood from "./ExtraSections/PopularFood";
 import TopFoods from "./ExtraSections/TopFoods";
 
 const Home = () => {
@@ -6,6 +7,9 @@ const Home = () => {
         <div>
             <div>
                 <Banner />
+            </div>
+            <div className="mt-20">
+                <PopularFood />
             </div>
             <div className="mt-20">
                 <TopFoods />
