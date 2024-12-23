@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { authContext } from "../../contexts/AuthProvider";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import Swal from "sweetalert2";
