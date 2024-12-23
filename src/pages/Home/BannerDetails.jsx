@@ -18,7 +18,7 @@ const BannerDetails = ({ image, secondaryTitle, primaryTitle, description }) => 
                             words={[primaryTitle]}
                             loop={5}
                             cursor
-                            cursorStyle='_'
+                            cursorStyle=''
                             typeSpeed={70}
                             deleteSpeed={50}
                             delaySpeed={1000}
