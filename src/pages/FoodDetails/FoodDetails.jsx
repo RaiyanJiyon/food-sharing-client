@@ -37,7 +37,7 @@ const FoodDetails = () => {
                             </div>
                         </div>
                         <Link to="/order" className="btn bg-[#c59d5f] hover:bg-black text-white font-bold border-none mt-6">
-                            Order Now
+                            Request
                         </Link>
                     </div>
                 </div>

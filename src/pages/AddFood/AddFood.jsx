@@ -1,8 +1,13 @@
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
+import { useEffect } from "react";
 import Swal from "sweetalert2";
 
 const AddFood = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     const { user } = useAuth();
     const { displayName, photoURL, email } = user;
 
@@ -18,7 +23,7 @@ const AddFood = () => {
         const pickupLocation = formData.get('pickupLocation');
         const expiredDate = formData.get('expiredDate');
         const additionalNotes = formData.get('additionalNotes');
-        const foodStatus = formData.get('foodStatus') === 'on';
+        const foodStatus = formData.get('foodStatus') === 'on' ? 'available' : 'unavailable';
 
         const foodData = {
             foodName,
