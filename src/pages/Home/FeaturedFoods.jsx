@@ -30,7 +30,7 @@ const FeaturedFoods = () => {
                         <div key={idx} className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
                             <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
                                 <img
-                                    className="h-56"
+                                    className="w-full h-56"
                                     src={`${food.foodUrl}`}
                                     alt={`${food.foodName} image`}
                                 />
@@ -66,6 +66,9 @@ const FeaturedFoods = () => {
                     ))
                 }
             </div>
+            <Link to={'/available-foods'} className="flex justify-center mt-6">
+                <button className="btn bg-[#c59d5f] hover:bg-black text-white font-bold border-none">Show All</button>
+            </Link>
         </div>
     );
 };

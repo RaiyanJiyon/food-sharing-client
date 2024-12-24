@@ -6,7 +6,7 @@ const FoodCard = ({ food }) => {
         <div className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
             <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
                 <img
-                    className="h-56"
+                    className="w-full h-56"
                     src={`${food.foodUrl}`}
                     alt={`${food.foodName} image`}
                 />
@@ -18,7 +18,7 @@ const FoodCard = ({ food }) => {
                 <h6 className="mb-2 text-slate-800 text-xl font-semibold">
                     {food.foodName}
                 </h6>
-                <p className="text-slate-600 leading-normal font-light">
+                <p className="h-8 text-slate-600 leading-normal font-light">
                     {food.additionalNotes}
                 </p>
             </div>
