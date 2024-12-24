@@ -1,20 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { MdDelete } from "react-icons/md";
 import { FaPen } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const ManageMyFoods = () => {
     const [foods, setFoods] = useState([]);
     const { user } = useAuth();
+    const navigate = useNavigate();
 
-    axios.get(`http://localhost:5000/foods/by-emails/${user.email}`)
-        .then((res) => {
-            setFoods(res.data);
-        })
-        .catch((error) => {
-            console.error(error.message);
-        });
+    useEffect(() => {
+        axios.get(`http://localhost:5000/foods/by-emails/${user.email}`)
+            .then((res) => {
+                setFoods(res.data);
+            })
+            .catch((error) => {
+                console.error(error.message);
+            });
+    }, [user.email]);
+
+    const handleUpdateFood = (id) => {
+        console.log(id);
+        navigate(`/updating-food/${id}`);
+    };
 
     return (
         <div className="w-11/12 mx-auto">
@@ -87,6 +96,7 @@ const ManageMyFoods = () => {
                                     </td>
                                     <td className="p-4 border-b border-blue-gray-50">
                                         <button
+                                            onClick={() => handleUpdateFood(food._id)}
                                             className="relative h-10 max-h-[40px] w-10 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                             type="button"
                                         >
