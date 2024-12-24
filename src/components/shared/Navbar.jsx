@@ -1,12 +1,11 @@
-
-import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import SuccessToaster from "../ToasterNotification/SuccessToaster";
 import ErrorToaster from "../ToasterNotification/ErrorToaster";
-import { authContext } from "../../contexts/AuthProvider";
+import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
-    const { user, logoutUser } = useContext(authContext);
+    const { user, logoutUser } = useAuth();
+    console.log(user);
     const navigate = useNavigate();
 
     const links = <>
@@ -17,7 +16,7 @@ const Navbar = () => {
         <NavLink to={"/my-food-requests"} className={({ isActive }) => isActive ? 'text-[#c59d5f] font-bold underline' : 'font-normal'}>My Food Request</NavLink>
         {
             user &&
-            <NavLink to={"/profile"} className={({ isActive }) => isActive ? 'font-bold underline' : 'font-normal'}>My Profile</NavLink>
+            <NavLink to={"/my-profile"} className={({ isActive }) => isActive ? 'text-[#c59d5f] font-bold underline' : 'font-normal'}>My Profile</NavLink>
         }
     </>
 

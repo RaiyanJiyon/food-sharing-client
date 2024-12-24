@@ -1,5 +1,6 @@
-import { useEffect } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
+import Modal from "../../components/ui/Modal";
 
 const FoodDetails = () => {
     useEffect(() => {
@@ -7,6 +8,10 @@ const FoodDetails = () => {
     }, []);
 
     const foodData = useLoaderData();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
     return (
         <div className="w-11/12 mx-auto mt-10">
@@ -36,12 +41,13 @@ const FoodDetails = () => {
                                 <p className="text-sm text-gray-600">{foodData.email}</p>
                             </div>
                         </div>
-                        <Link to="/order" className="btn bg-[#c59d5f] hover:bg-black text-white font-bold border-none mt-6">
+                        <button onClick={openModal}  className="btn bg-[#c59d5f] hover:bg-black text-white font-bold border-none mt-6">
                             Request
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </div>
+            <Modal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );
 };

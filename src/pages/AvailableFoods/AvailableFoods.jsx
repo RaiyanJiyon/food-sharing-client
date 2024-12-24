@@ -1,27 +1,36 @@
-import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import FoodCard from "./FoodCard";
 import SearchSection from "./SearchSection";
-import { useState } from "react";
-
-const fetchFoods = async () => {
-    const res = await axios.get("http://localhost:5000/foods");
-    return res.data;
-};
 
 const AvailableFoods = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const [allFoods, setAllFoods] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const [isThreeColumn, setIsThreeColumn] = useState(true);
 
-    // Fetch data with TanStack Query
-    const { data: allFoods = [] } = useQuery({
-        queryKey: ["foods"],
-        queryFn: fetchFoods,
-    });
+    useEffect(() => {
+        const fetchFoods = async () => {
+            try {
+                const res = await axios.get('http://localhost:5000/foods');
+                setAllFoods(res.data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        fetchFoods();
+    }, []);
 
-    // Filter foods based on the search term
-    const filteredFoods = allFoods.filter((food) =>
+    const filteredFoods = allFoods.filter(food =>
         food.foodName.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    const toggleLayout = () => {
+        setIsThreeColumn(!isThreeColumn);
+    };
 
     return (
         <div className="w-11/12 mx-auto">
@@ -29,7 +38,17 @@ const AvailableFoods = () => {
                 <SearchSection searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="my-6 text-center">
+                <button
+                    onClick={toggleLayout}
+                    className="px-4 py-2 bg-[#c59d5f] text-white rounded hover:bg-black transition"
+                >
+                    Change to {isThreeColumn ? "Two" : "Three"} Column Layout
+                </button>
+            </div>
+
+            {/* Dynamic Grid */}
+            <div className={`grid gap-6 ${isThreeColumn ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3" : "grid-cols-1 sm:grid-cols-1 md:grid-cols-2"}`}>
                 {filteredFoods.map((food, idx) => (
                     <FoodCard key={idx} food={food} />
                 ))}
