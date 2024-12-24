@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Banner from "./Banner";
 import PopularFood from "./ExtraSections/PopularFood";
 import TopFoods from "./ExtraSections/TopFoods";
+import FeaturedFoods from "./FeaturedFoods";
 
 const Home = () => {
     useEffect(() => {
@@ -12,6 +13,9 @@ const Home = () => {
         <div>
             <div>
                 <Banner />
+            </div>
+            <div className="mt-20">
+                <FeaturedFoods />
             </div>
             <div className="mt-20">
                 <PopularFood />
