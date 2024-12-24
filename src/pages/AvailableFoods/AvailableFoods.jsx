@@ -1,29 +1,25 @@
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useState } from "react";
 import FoodCard from "./FoodCard";
 import SearchSection from "./SearchSection";
+import { useState } from "react";
+
+const fetchFoods = async () => {
+    const res = await axios.get("http://localhost:5000/foods");
+    return res.data;
+};
 
 const AvailableFoods = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    const [allFoods, setAllFoods] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-    useEffect(() => {
-        const fetchFoods = async () => {
-            try {
-                const res = await axios.get('http://localhost:5000/foods')
-                setAllFoods(res.data);
-            } catch (error) {
-                console.error(error);
-            }
-        }
-        fetchFoods();
-    }, [])
+    // Fetch data with TanStack Query
+    const { data: allFoods = [] } = useQuery({
+        queryKey: ["foods"],
+        queryFn: fetchFoods,
+    });
 
-    const filteredFoods = allFoods.filter(food =>
+    // Filter foods based on the search term
+    const filteredFoods = allFoods.filter((food) =>
         food.foodName.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
@@ -34,12 +30,9 @@ const AvailableFoods = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {
-                    filteredFoods.map((food, idx) => (
-                        <FoodCard key={idx} food={food} />
-                    ))
-                }
-
+                {filteredFoods.map((food, idx) => (
+                    <FoodCard key={idx} food={food} />
+                ))}
             </div>
         </div>
     );
