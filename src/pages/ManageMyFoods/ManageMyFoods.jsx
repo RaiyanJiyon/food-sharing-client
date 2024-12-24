@@ -4,6 +4,7 @@ import axios from "axios";
 import { MdDelete } from "react-icons/md";
 import { FaPen } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ManageMyFoods = () => {
     const [foods, setFoods] = useState([]);
@@ -11,18 +12,50 @@ const ManageMyFoods = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/foods/by-emails/${user.email}`)
-            .then((res) => {
+        const fetchFoods = async () => {
+            try {
+                const res = await axios.get(`http://localhost:5000/foods/by-emails/${user.email}`);
                 setFoods(res.data);
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error(error.message);
-            });
+            }
+        };
+        fetchFoods();
     }, [user.email]);
 
-    const handleUpdateFood = (id) => {
+    const handleUpdateFood = id => {
         console.log(id);
         navigate(`/updating-food/${id}`);
+    };
+
+    const handleDeleteFood = id => {
+        console.log(id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                axios.delete(`http://localhost:5000/foods/${id}`)
+                    .then(res => {
+                        if (res.data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                            setFoods(foods.filter(food => food._id !== id));
+                        }
+                    })
+                    .catch(() => {
+                        Swal.fire("Error!", "Something went wrong. Please try again.", "error");
+                    });
+            }
+        });
     };
 
     return (
@@ -105,6 +138,7 @@ const ManageMyFoods = () => {
                                             </span>
                                         </button>
                                         <button
+                                            onClick={() => handleDeleteFood(food._id)}
                                             className="relative h-10 max-h-[40px] w-10 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-gray-900 transition-all hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                             type="button"
                                         >

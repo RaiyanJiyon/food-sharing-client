@@ -66,9 +66,9 @@ const UpdateFood = () => {
             .catch(error => {
                 console.error('Error updating food data:', error.message);
                 Swal.fire({
-                    title: `${error.message}`,
-                    icon: "error",
-                    draggable: true,
+                    icon: 'error',
+                    title: 'Update Failed',
+                    text: 'Failed to update food details. Please try again.',
                 });
             });
     };
