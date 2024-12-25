@@ -27,6 +27,7 @@ const FeaturedFoods = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {
                     featuredFood.map((food, idx) => (
+                        food.foodStatus === 'available' &&
                         <div key={idx} className="relative flex flex-col my-6 bg-white shadow-sm border border-slate-200 rounded-lg">
                             <div className="relative h-56 m-2.5 overflow-hidden text-white rounded-md">
                                 <img

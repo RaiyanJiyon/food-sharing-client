@@ -18,9 +18,7 @@ const FoodCard = ({ food }) => {
                 <h6 className="mb-2 text-slate-800 text-xl font-semibold">
                     {food.foodName}
                 </h6>
-                <p className="h-8 text-slate-600 leading-normal font-light">
-                    {food.additionalNotes}
-                </p>
+                <p className="text-slate-600 leading-normal font-light"><span className="font-semibold">Expires On:</span> {new Date(food.expiredDate).toLocaleString()}</p>
             </div>
             <div className="flex items-center justify-between p-4">
                 <div className="flex items-center">

@@ -5,7 +5,6 @@ import useAuth from "../../hooks/useAuth";
 
 const Navbar = () => {
     const { user, logoutUser } = useAuth();
-    console.log(user);
     const navigate = useNavigate();
 
     const links = <>
@@ -67,35 +66,24 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user ?
-                        <div className="dropdown dropdown-end">
-                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                <div className="w-10 rounded-full">
-                                    <img
-                                        alt="Profile image"
-                                        src={user ? user.photoURL : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fblank-profile-pic&psig=AOvVaw3A7ocg8Ov4kMh92B2MEolH&ust=1732366004923000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLDH7rf874kDFQAAAAAdAAAAABAE"} />
+                        <div className="flex items-center gap-4">
+                            <div className="avatar cursor-pointer">
+                                <div className="w-12 rounded-full">
+                                    <img src={user.photoURL} />
                                 </div>
                             </div>
-                            <ul
-                                tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-black text-white rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                <li>
-                                    <Link to={"/profile"} className="justify-between">
-                                        Profile
-                                        <span className="badge">New</span>
-                                    </Link>
-                                </li>
-                                <li><Link to={"/profile/update"}>Update Profile</Link></li>
-                                <li onClick={handleLogoutUser}><a>Logout</a></li>
-                            </ul>
+                            <div onClick={handleLogoutUser}>
+                                <button className="btn bg-black text-white font-bold hover:bg-[#c59d5f]">Logout</button>
+                            </div>
                         </div>
                         :
                         <div className="space-x-4">
-                        <Link to={'/login'}>
-                            <button className="btn bg-black text-white font-bold hover:bg-[#c59d5f]">Login</button>
-                        </Link>
-                        <Link to={'/register'}>
-                            <button className="btn bg-black text-white font-bold hover:bg-[#c59d5f]">Signup</button>
-                        </Link>
+                            <Link to={'/login'}>
+                                <button className="btn bg-black text-white font-bold hover:bg-[#c59d5f]">Login</button>
+                            </Link>
+                            <Link to={'/register'}>
+                                <button className="btn bg-black text-white font-bold hover:bg-[#c59d5f]">Signup</button>
+                            </Link>
                         </div>
                 }
             </div>

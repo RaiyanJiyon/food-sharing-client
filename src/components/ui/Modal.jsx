@@ -36,7 +36,7 @@ const Modal = ({ isOpen, onClose }) => {
                     Swal.fire({
                         position: "top-center",
                         icon: "success",
-                        title: "Submission Successful",
+                        title: "Added To My Request Food",
                         showConfirmButton: false,
                         timer: 1500
                     });
@@ -48,7 +48,7 @@ const Modal = ({ isOpen, onClose }) => {
                 Swal.fire({
                     position: "top-center",
                     icon: "error",
-                    title: "Submission Failed",
+                    title: "Request Failed",
                     text: error.message,
                     showConfirmButton: true
                 });
