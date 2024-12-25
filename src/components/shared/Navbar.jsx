@@ -1,4 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 import SuccessToaster from "../ToasterNotification/SuccessToaster";
 import ErrorToaster from "../ToasterNotification/ErrorToaster";
 import useAuth from "../../hooks/useAuth";
@@ -67,11 +69,12 @@ const Navbar = () => {
                 {
                     user ?
                         <div className="flex items-center gap-4">
-                            <div className="avatar cursor-pointer">
+                            <div className="avatar cursor-pointer" data-tooltip-id="avatar-tooltip">
                                 <div className="w-12 rounded-full">
-                                    <img src={user.photoURL} />
+                                    <img src={user.photoURL} alt="Profile" />
                                 </div>
                             </div>
+                            <Tooltip className="z-10" id="avatar-tooltip">{user.displayName}</Tooltip>
                             <div onClick={handleLogoutUser}>
                                 <button className="btn bg-black text-white font-bold hover:bg-[#c59d5f]">Logout</button>
                             </div>
@@ -87,7 +90,7 @@ const Navbar = () => {
                         </div>
                 }
             </div>
-        </div >
+        </div>
     );
 };
 
