@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import PopularFood from "./ExtraSections/PopularFood";
 import TopFoods from "./ExtraSections/TopFoods";
 import FeaturedFoods from "./FeaturedFoods";
+import FoodDelivery from "./ExtraSections/FoodDelivery";
 
 const Home = () => {
     useEffect(() => {
@@ -22,6 +23,9 @@ const Home = () => {
             </div>
             <div className="mt-20">
                 <TopFoods />
+            </div>
+            <div className="mt-20">
+                <FoodDelivery />
             </div>
         </div>
     );
