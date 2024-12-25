@@ -1,6 +1,7 @@
 import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const AddFood = () => {
@@ -10,6 +11,7 @@ const AddFood = () => {
     
     const { user } = useAuth();
     const { displayName, photoURL, email } = user;
+    const navigate = useNavigate();
 
     const handleAddFoodForm = e => {
         e.preventDefault();
@@ -46,6 +48,7 @@ const AddFood = () => {
                         icon: "success",
                         draggable: true
                     });
+                    navigate('/available-foods');
                 }
             })
             .catch(error => {

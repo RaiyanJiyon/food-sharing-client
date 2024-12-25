@@ -17,7 +17,7 @@ const Home = () => {
             <div className="mt-20">
                 <FeaturedFoods />
             </div>
-            <div className="mt-20">
+            <div className="mt-16">
                 <PopularFood />
             </div>
             <div className="mt-20">

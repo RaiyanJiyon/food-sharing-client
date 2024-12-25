@@ -67,7 +67,7 @@ const TopFoods = () => {
     return (
         <div>
             <div data-aos="zoom-in-down" className="space-y-4">
-                <h2 className="text-3xl text-[#E1713B] font-bold text-center">Top Foods</h2>
+                <h2 className="text-3xl text-[#c59d5f] font-bold text-center">Top Foods</h2>
                 <p className="w-full md:w-4/5 mx-auto text-[#394e6a] text-lg text-center font-medium">
                     Explore the finest selection of top foods renowned for their quality and taste.
                     Let&apos;s dive into their exclusive offerings!

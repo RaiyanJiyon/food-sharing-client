@@ -47,9 +47,9 @@ const PopularFood = () => {
 
     return (
         <div className='w-11/12 mx-auto'>
-            <div>
-                <h2 className='mb-5 text-3xl font-bold'>Popular Dishes Of Our Restaurant</h2>
-                <p className='text-gray-800 mb-10'>Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Orci ac auctor augue mauris augue neque gravida in Aliquam.</p>
+            <div data-aos="zoom-in-down" className="space-y-4 mb-12">
+                <h2 className="text-3xl text-[#c59d5f] font-bold text-center">Popular Dishes Of Our Restaurant</h2>
+                <p className="w-full md:w-4/5 mx-auto text-[#394e6a] text-lg text-center font-medium">Explore our most-loved dishes and discover why they have become favorites among our patrons..</p>
             </div>
             <Swiper
                 modules={[Navigation, Autoplay]}
