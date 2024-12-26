@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Modal = ({ isOpen, onClose, foodData }) => {
     const { user } = useAuth();
@@ -9,27 +10,23 @@ const Modal = ({ isOpen, onClose, foodData }) => {
 
     const handleRequestFoodForm = e => {
         e.preventDefault();
-    
+
         const updatedFoodData = {
             ...foodData,
             foodStatus: "requested",
             requestDate: currentDate, // Add current date
             requestedBy: user.email, // Add current user's email
         };
-    
+
         console.log('Updated Food Data:', updatedFoodData); // Log the updated food data
-    
+
         // Update the food status in the database
-        fetch(`https://food-sharing-server-pied.vercel.app/foods/${foodData._id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(updatedFoodData),
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount > 0) {
+        axios
+            .put(`https://food-sharing-server-pied.vercel.app/foods/${foodData._id}`, updatedFoodData, {
+                withCredentials: true, // Include credentials
+            })
+            .then((res) => {
+                if (res.data.modifiedCount > 0) {
                     Swal.fire({
                         position: "top-center",
                         icon: "success",
@@ -41,7 +38,7 @@ const Modal = ({ isOpen, onClose, foodData }) => {
                     navigate('/my-food-requests');
                 }
             })
-            .catch(error => {
+            .catch((error) => {
                 Swal.fire({
                     position: "top-center",
                     icon: "error",
@@ -51,8 +48,8 @@ const Modal = ({ isOpen, onClose, foodData }) => {
                 });
             });
     };
-    
-    
+
+
 
     return (
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle" open={isOpen}>

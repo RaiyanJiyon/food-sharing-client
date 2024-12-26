@@ -52,15 +52,6 @@ const Login = () => {
             });
     };
 
-    const navigateToForgetPassword = () => {
-        const emailInput = document.getElementById('email');
-        navigate("/auth/forgot-password", {
-            state: {
-                email: emailInput.value,
-            }
-        });
-    }
-
     return (
         <section className="bg-gray-50 mt-6">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0">
