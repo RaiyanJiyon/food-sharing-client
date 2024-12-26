@@ -2,6 +2,8 @@ import { createContext, useEffect, useState } from "react";
 
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from "../utils/firebase.config";
+import axios from "axios";
+import { use } from "react";
 
 const authContext = createContext(null);
 const auth = getAuth(app);
@@ -56,7 +58,23 @@ const AuthProvider = ({ children }) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
-            setLoading(false);
+            console.log('state capture', currentUser?.email);
+
+            if (currentUser?.email) {
+                const user = { email: currentUser.email }
+                axios.post('https://food-sharing-server-pied.vercel.app/jwt', user, {withCredentials: true})
+                .then(res => {
+                    console.log('login', res.data)
+                    setLoading(false);
+                })
+            }else {
+                axios.post('https://food-sharing-server-pied.vercel.app/logout', {}, {withCredentials: true})
+                .then(res => {
+                    console.log('logout', res.data);
+                    setLoading(false);
+                })
+            }
+
         })
         return () => unsubscribe();
     }, []);

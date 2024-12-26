@@ -2,7 +2,7 @@
 A dynamic platform to share, manage, and request surplus food efficiently.  
 
 ## Live Site 🌐  
-Visit [FoodShare](https://your-live-site-url.com)  
+Visit [FoodShare](https://precious-taffy-271e2b.netlify.app/)  
 
 ## Features ✨  
 - **Responsive Design**: Fully optimized for all devices.  
