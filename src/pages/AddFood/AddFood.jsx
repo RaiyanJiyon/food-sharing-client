@@ -40,7 +40,7 @@ const AddFood = () => {
             email
         };
 
-        axios.post('http://localhost:5000/foods', foodData)
+        axios.post('https://food-sharing-server-pied.vercel.app/foods', foodData)
             .then(res => {
                 if (res.data.insertedId) {
                     Swal.fire({

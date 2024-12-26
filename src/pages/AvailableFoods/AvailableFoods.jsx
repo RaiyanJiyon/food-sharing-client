@@ -17,7 +17,7 @@ const AvailableFoods = () => {
     useEffect(() => {
         const fetchFoods = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/foods');
+                const res = await axios.get('https://food-sharing-server-pied.vercel.app/foods');
                 setAllFoods(res.data);
             } catch (error) {
                 console.error(error);

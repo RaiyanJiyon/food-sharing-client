@@ -20,7 +20,7 @@ const Modal = ({ isOpen, onClose, foodData }) => {
         console.log('Updated Food Data:', updatedFoodData); // Log the updated food data
     
         // Update the food status in the database
-        fetch(`http://localhost:5000/foods/${foodData._id}`, {
+        fetch(`https://food-sharing-server-pied.vercel.app/foods/${foodData._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

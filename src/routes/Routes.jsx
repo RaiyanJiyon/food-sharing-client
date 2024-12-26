@@ -36,7 +36,7 @@ const router = createBrowserRouter([
                         <FoodDetails />
                     </PrivateRoute>
                 ),
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
+                loader: ({ params }) => fetch(`https://food-sharing-server-pied.vercel.app/foods/${params.id}`)
             },
             {
                 path: "/add-food",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
                         <UpdateFood />
                     </PrivateRoute>
                 ),
-                loader: () => fetch('http://localhost:5000/foods')
+                loader: () => fetch('https://food-sharing-server-pied.vercel.app/foods')
             },
             {
                 path: "/my-food-requests",
