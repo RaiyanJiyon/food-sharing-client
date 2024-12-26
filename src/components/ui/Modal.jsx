@@ -14,8 +14,8 @@ const Modal = ({ isOpen, onClose, foodData }) => {
         const updatedFoodData = {
             ...foodData,
             foodStatus: "requested",
-            requestDate: currentDate, // Add current date
-            requestedBy: user.email, // Add current user's email
+            requestDate: currentDate, 
+            requestedBy: user.email, 
         };
 
         console.log('Updated Food Data:', updatedFoodData); // Log the updated food data
@@ -26,7 +26,8 @@ const Modal = ({ isOpen, onClose, foodData }) => {
                 withCredentials: true, // Include credentials
             })
             .then((res) => {
-                if (res.data.modifiedCount > 0) {
+                console.log('Response Data:', res.data); // Log the full response data
+                if (res.data.matchedCount > 0 && res.data.modifiedCount > 0) {
                     Swal.fire({
                         position: "top-center",
                         icon: "success",
@@ -36,6 +37,14 @@ const Modal = ({ isOpen, onClose, foodData }) => {
                     });
                     onClose();
                     navigate('/my-food-requests');
+                } else {
+                    Swal.fire({
+                        position: "top-center",
+                        icon: "error",
+                        title: "Request Failed",
+                        text: "Food status was not updated. Please try again.",
+                        showConfirmButton: true,
+                    });
                 }
             })
             .catch((error) => {
@@ -48,8 +57,6 @@ const Modal = ({ isOpen, onClose, foodData }) => {
                 });
             });
     };
-
-
 
     return (
         <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle" open={isOpen}>
@@ -74,6 +81,5 @@ const Modal = ({ isOpen, onClose, foodData }) => {
         </dialog>
     );
 };
-
 
 export default Modal;

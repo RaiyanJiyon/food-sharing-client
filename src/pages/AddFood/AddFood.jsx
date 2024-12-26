@@ -8,7 +8,7 @@ const AddFood = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    
+
     const { user } = useAuth();
     const { displayName, photoURL, email } = user;
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ const AddFood = () => {
 
         const foodName = formData.get('foodName');
         const foodUrl = formData.get('foodUrl');
-        const foodQuantity = formData.get('foodQuantity');
+        const foodQuantity = Number(formData.get('foodQuantity'));
         const pickupLocation = formData.get('pickupLocation');
         const expiredDate = formData.get('expiredDate');
         const additionalNotes = formData.get('additionalNotes');
@@ -40,7 +40,7 @@ const AddFood = () => {
             email
         };
 
-        axios.post('https://food-sharing-server-pied.vercel.app/foods', foodData, {withCredentials: true})
+        axios.post('https://food-sharing-server-pied.vercel.app/foods', foodData, { withCredentials: true })
             .then(res => {
                 if (res.data.insertedId) {
                     Swal.fire({
