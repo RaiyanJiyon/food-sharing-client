@@ -97,7 +97,6 @@ const Login = () => {
                                         <label htmlFor="remember" className="text-gray-500">Remember me</label>
                                     </div>
                                 </div>
-                                <span onClick={navigateToForgetPassword} className="text-sm font-medium text-black hover:underline">Forgot password?</span>
                             </div>
                             <button type="submit" className="w-full bg-black hover:bg-[#c59d5f] text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-bold rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
                             <p className="text-sm font-light text-gray-500">

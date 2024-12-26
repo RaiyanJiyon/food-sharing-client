@@ -7,6 +7,10 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const ManageMyFoods = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     const [foods, setFoods] = useState([]);
     const { user } = useAuth();
     const navigate = useNavigate();

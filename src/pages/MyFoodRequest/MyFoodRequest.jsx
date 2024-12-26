@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import useAuth from "../../hooks/useAuth";
 
 const MyFoodRequest = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
     const [foods, setFoods] = useState([]);
     const { user } = useAuth();
 

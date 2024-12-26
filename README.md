@@ -47,9 +47,14 @@ Visit [FoodShare](https://precious-taffy-271e2b.netlify.app/)
 - **Authentication**: Firebase Authentication with JWT support.  
 - **Hosting**: Firebase Hosting for client-side deployment.  
 
+## Npm Package Used 🛠️  
+- **React Icons**
+- **React Helmet**
+- **React Tooltips**
+  
+
 ## Additional Features 🚀  
-- **Toggle Layout**: Switch between 3-column and 2-column layouts for food listings.  
-- **Animations**: Enhanced user experience using Framer Motion.  
+- **Toggle Layout**: Switch between 3-column and 2-column layouts for food listings.    
 - **Environment Variables**: Securely manage Firebase keys and API credentials.  
 - **404 Page**: Friendly error page for invalid routes.  
 - **Loading Spinner**: Indicates data-fetching states.  
