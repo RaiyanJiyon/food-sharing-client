@@ -26,7 +26,7 @@ const Profile = () => {
                     <h3 className='text-2xl font-bold pt-4 text-center'>{user && user.displayName ? user.displayName : "Anonymous"}</h3>
                     <p className="text-sm text-gray-600 pb-4">{user && user.email ? user.email : "Anonymous email"}</p>
                     <Link to={"/update-profile"}>
-                        <button className="btn bg-[#c59d5f] text-white">Update Profile</button>
+                        <button className="btn bg-black text-white font-bold">Update Profile</button>
                     </Link>
                 </div>
             </div>
