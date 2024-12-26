@@ -9,7 +9,7 @@ const Profile = () => {
         <div>
             <div className='pb-24'>
                 {/* heading div */}
-                <div className='bg-[#c59d5f] pb-48'>
+                <div className='bg-black pb-48'>
                     <h2 data-aos="fade-down" className='text-3xl font-bold text-white pt-8 text-center'>Welcome {user && user.displayName ? user.displayName : "Loading"}</h2>
                 </div>
 

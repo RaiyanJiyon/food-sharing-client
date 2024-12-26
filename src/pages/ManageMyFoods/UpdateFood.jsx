@@ -32,7 +32,7 @@ const UpdateFood = () => {
 
         const foodName = formData.get('foodName');
         const foodUrl = formData.get('foodUrl');
-        const foodQuantity = formData.get('foodQuantity');
+        const foodQuantity = Number(formData.get('foodQuantity'));
         const pickupLocation = formData.get('pickupLocation');
         const expiredDate = formData.get('expiredDate');
         const additionalNotes = formData.get('additionalNotes');
