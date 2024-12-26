@@ -51,7 +51,7 @@ const UpdateFood = () => {
             email,
         };
 
-        axios.put(`https://food-sharing-server-pied.vercel.app/foods/${id}`, foodData)
+        axios.put(`https://food-sharing-server-pied.vercel.app/foods/${id}`, foodData, {withCredentials: true})
             .then(res => {
                 if (res.data.modifiedCount > 0) {
                     Swal.fire({
