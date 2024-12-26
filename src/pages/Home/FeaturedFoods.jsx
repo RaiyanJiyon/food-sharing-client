@@ -8,7 +8,7 @@ const FeaturedFoods = () => {
     useEffect(() => {
         const fetchFoods = async () => {
             try {
-                const res = await axios.get('https://food-sharing-server-pied.vercel.app/featured-foods');
+                const res = await axios.get('https://food-sharing-server-pied.vercel.app/featured-foods', {withCredentials: true});
                 setFeaturedFood(res.data);
             } catch (error) {
                 console.error(error);

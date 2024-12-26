@@ -9,7 +9,7 @@ const MyFoodRequest = () => {
     // Function to fetch data
     const fetchFoods = async () => {
         try {
-            const res = await axios.get("https://food-sharing-server-pied.vercel.app/foods");
+            const res = await axios.get("https://food-sharing-server-pied.vercel.app/foods", {withCredentials: true});
             setFoods(res.data);
         } catch (error) {
             console.error("Error fetching foods:", error);

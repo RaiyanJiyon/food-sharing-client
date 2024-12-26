@@ -14,7 +14,7 @@ const ManageMyFoods = () => {
     useEffect(() => {
         const fetchFoods = async () => {
             try {
-                const res = await axios.get(`https://food-sharing-server-pied.vercel.app/foods/by-emails/${user.email}`);
+                const res = await axios.get(`https://food-sharing-server-pied.vercel.app/foods/by-emails/${user.email}`, {withCredentials: true});
                 setFoods(res.data);
             } catch (error) {
                 console.error(error.message);
@@ -40,7 +40,7 @@ const ManageMyFoods = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                axios.delete(`https://food-sharing-server-pied.vercel.app/foods/${id}`)
+                axios.delete(`https://food-sharing-server-pied.vercel.app/foods/${id}`, {withCredentials: true})
                     .then(res => {
                         if (res.data.deletedCount > 0) {
                             Swal.fire({
