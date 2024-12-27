@@ -61,7 +61,8 @@ const Register = () => {
                 SuccessToaster("Successfully Signed In")
                 setUser({user, 
                     displayName: name,
-                    photoURL: photoURL
+                    photoURL: photoURL,
+                    email: email
                 })
                 navigate("/");
                 form.reset();
